@@ -1,4 +1,4 @@
---insert into players(id, name,country,isBatsman,isBowler)
+insert into players(id, name,country,isBatsman,isBowler)
 select distinct null,striker,batting_team,1,0 
 from odi_match_data2 
 where batting_team not in ('Papua New Guinea',
@@ -9,9 +9,9 @@ where batting_team not in ('Papua New Guinea',
 group by striker,batting_team having sum(runs_off_bat)>300 
 
 
---insert into players(id, name,country,isBatsman,isBowler)
+insert into players(id, name,country,isBatsman,isBowler)
 select distinct null,bowler,bowling_team,0,1
-from odi_match_data 
+from odi_match_data2 
 where bowling_team not in 
 ('Papua New Guinea',
 'United Arab Emirates',
@@ -27,7 +27,7 @@ select  name from players group by name having count(*)>1
 )
 
 --reseed identity 
---DELETE FROM SQLITE_-SEQUENCE WHERE NAME = 'players';
+DELETE FROM SQLITE_-SEQUENCE WHERE NAME = 'players';
 
 --delete duplicates
 DELETE FROM players
