@@ -37,6 +37,7 @@ select wicketsPerBall FROM
 
 
 --sets number of runs conceded per ball for bowlers
+
 update players set runsConcededPerBall = 
 (
 select round(cast(sum(runs_off_bat) as real) /count(1), 4) from odi_match_data2 where bowler=players.name
