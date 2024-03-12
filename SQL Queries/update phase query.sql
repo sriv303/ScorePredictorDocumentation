@@ -1,4 +1,4 @@
-update odi_match_data2 set phase = 
+update match_data set phase = 
 case 
 when ball <=10 then 1
 when ball >10 and ball <=20 then 2
