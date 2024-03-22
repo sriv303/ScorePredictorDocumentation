@@ -1,0 +1,9 @@
+Score Predictor - Welcome
+
+form: 
+back volor : MenuBar
+start posittion: CenterScreen
+
+button font:Segoe UI, 9.75pt
+	size: 209, 59
+	forecolor: Highlight
